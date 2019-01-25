@@ -3,10 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'event-app',
-  template: `
-  <h2>Hello World</h2>
-  <img src="/assets/images/basic-shield.png" />
-  `
+  template: '<event-list></event-list>'
 })
 export class EventAppComponent {
   title = 'App';
