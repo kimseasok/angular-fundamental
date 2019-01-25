@@ -8,17 +8,7 @@ import { Component } from '@angular/core';
       <hr />
       <event-thumnail [event]="event1"></event-thumnail>
     </div>
-  `,
-  styles: [
-    `
-      .pad-left {
-        margine-left: 10px;
-      }
-      .well div {
-        color: #bbb;
-      }
-    `
-  ]
+  `
 })
 export class EventsListComponent {
   event1 = {
