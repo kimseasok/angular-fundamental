@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'event-list',
@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr />
-      <event-thumnail [event]='event1'></event-thumnail>
+      <event-thumnail
+        [event]="event1"
+        (eventClick)="handleEventClicked($event)"
+      ></event-thumnail>
     </div>
   `
 })
-export class EventsListComponent implements OnInit {
+export class EventsListComponent {
   event1 = {
     id: 1,
     name: 'Angular Connection',
@@ -26,5 +29,7 @@ export class EventsListComponent implements OnInit {
   };
   constructor() {}
 
-  ngOnInit() {}
+  handleEventClicked(data) {
+    console.log(data);
+  }
 }
