@@ -1,28 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: 'event-list',
   template: `
     <div>
-      <h1>Upcomming Angular Events</h1>
+      <h1>Upcoming Angular Events</h1>
       <hr />
-      <div class="well hoverwell thumnail">
-        <h2>{{event.name}}</h2>
-        <div>Date: {{event.date}}</div>
-        <div>Time: {{event.time}}</div>
-        <div>Price: \${{event.price}}</div>
-        <div>
-          <span>Location: {{event.location.address}}</span>
-          <span>&nbsp;</span>
-          <span>{{event.location.city}}, {{event.location.country}}</span>
-        </div>
-      </div>
+      <event-thumnail [event]='event1'></event-thumnail>
     </div>
   `
 })
 export class EventsListComponent implements OnInit {
-  event = {
+  event1 = {
     id: 1,
     name: 'Angular Connection',
     date: '9/26/2036',
