@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr />
-      <event-thumnail #thumnail [event]="event1"></event-thumnail>
-      <h3>{{thumnail.someProperty}}</h3>
-      <button class="btn btn-primary" (click)="thumnail.logFoo()">LogFoo</button>
+      <event-thumnail [event]="event1"></event-thumnail>
     </div>
   `
 })
