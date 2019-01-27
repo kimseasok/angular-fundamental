@@ -15,4 +15,8 @@ export class LoginComponent {
     this.auth.loginUser(formValues.userName, formValues.password);
     this.router.navigate(['events']);
   }
+
+  cancelLogin() {
+    this.router.navigate(['events']);
+  }
 }
