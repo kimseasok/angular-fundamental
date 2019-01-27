@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IEvent } from './shared/event.module';
 
 @Component({
   selector: 'event-thumnail',
@@ -17,8 +18,8 @@ import { Component, Input } from '@angular/core';
         <span>Location: {{ event.location.address }}</span>
         <span>{{ event.location.city }}, {{ event.location.country }}</span>
       </div>
-      <div *ngIf="event.onlineOnly">
-        <span>Online only: {{ event.onlineOnly }}</span>
+      <div *ngIf="event.onlineUrl">
+        <span>Online only: {{ event.onlineUrl }}</span>
       </div>
     </div>
   `,
@@ -40,7 +41,7 @@ import { Component, Input } from '@angular/core';
   ]
 })
 export class EventsThumnailComponent {
-  @Input() event: any;
+  @Input() event: IEvent;
   constructor() {}
 
   logFoo() {
