@@ -37,7 +37,7 @@ import { EventListResolver } from './events/event-list-resolver.service';
 })
 export class AppModule {}
 
-function checkDirtyState(component: CreateEventComponent) {
+export function checkDirtyState(component: CreateEventComponent) {
   if (component.isDirtyState) {
     return window.confirm(
       'You have not save this event, do you really want to cancel?'
