@@ -195,7 +195,7 @@
         class="form-control"
         placeholder="url of image..."
       />
-      <img [src]="newEventForm.controls.imageUrl.value" *ngIf="!!newEventForm.controls.imageUrl?.valid" />
+      <img [src]="newEventForm?.controls.imageUrl.value" *ngIf="!!newEventForm.controls.imageUrl?.valid" />
     </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
