@@ -21,6 +21,11 @@ export class EventService {
     event.id = 199;
     EVENTS.push(event);
   }
+
+  updateEvent(event: IEvent) {
+    const index = EVENTS.findIndex(x => x.id === event.id);
+    EVENTS[index] = event;
+  }
 }
 
 const EVENTS: IEvent[] = [
@@ -229,7 +234,7 @@ const EVENTS: IEvent[] = [
       },
       {
         id: 6,
-        name: 'These aren\'t the directives you\'re looking for',
+        name: "These aren't the directives you're looking for",
         presenter: 'John Papa',
         duration: 2,
         level: 'Intermediate',
