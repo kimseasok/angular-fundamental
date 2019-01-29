@@ -42,9 +42,4 @@ import { IEvent } from './shared/event.module';
 })
 export class EventsThumnailComponent {
   @Input() event: IEvent;
-  constructor() {}
-
-  logFoo() {
-    console.log('foo');
-  }
 }

@@ -20,8 +20,12 @@ import { CreateSessionComponent } from './events/event-detials/create-session.co
 import { SessionListComponent } from './events/event-detials/session-list.component';
 import { CollasibleWellComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './events/event-detials/duration.pipe';
+import { SimpleModalComponent } from './common/simple-modal.component';
+import { JQUERY_TOKEN } from './common/jquery.service';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
 
-declare const toastr: Toastr;
+const toastr: Toastr = window['toastr'];
+const jQuery = window['$'];
 
 @NgModule({
   imports: [
@@ -41,11 +45,14 @@ declare const toastr: Toastr;
     SessionListComponent,
     Error404Component,
     CollasibleWellComponent,
-    DurationPipe
+    SimpleModalComponent,
+    ModalTriggerDirective,
+    DurationPipe,
   ],
   providers: [
     EventService,
     { provide: TOASTR_TOKEN, useValue: toastr },
+    { provide: JQUERY_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
     AuthService,
