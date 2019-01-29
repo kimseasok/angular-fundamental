@@ -16,7 +16,7 @@ import { IEvent, ISession } from '../shared/event.module';
       }
 
       a {
-        cursor: pointer;
+        cursor: pointer = 'all';
       }
     `
   ]
@@ -24,6 +24,7 @@ import { IEvent, ISession } from '../shared/event.module';
 export class EventDetialComponent implements OnInit {
   event: IEvent;
   addMode: boolean;
+  filterBy = 'all';
   constructor(
     private eventService: EventService,
     private route: ActivatedRoute
