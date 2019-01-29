@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateSessionComponent } from './events/event-detials/create-session.component';
 import { SessionListComponent } from './events/event-detials/session-list.component';
 import { CollasibleWellComponent } from './common/collapsible-well.component';
+import { DurationPipe } from './events/event-detials/duration.pipe';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { CollasibleWellComponent } from './common/collapsible-well.component';
     CreateSessionComponent,
     SessionListComponent,
     Error404Component,
-    CollasibleWellComponent
+    CollasibleWellComponent,
+    DurationPipe
   ],
   providers: [
     EventService,

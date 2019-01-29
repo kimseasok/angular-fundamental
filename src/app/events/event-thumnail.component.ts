@@ -5,7 +5,7 @@ import { IEvent } from './shared/event.module';
   selector: 'event-thumnail',
   template: `
     <div class="well hoverwell thumnail" *ngIf="event" [routerLink]="['/events', event.id]">
-      <h2>{{ event.name }}</h2>
+      <h2>{{ event.name | uppercase }}</h2>
       <div>Date: {{ event.date }}</div>
       <div [class.green]="event?.time === '8:00 am'" [ngSwitch]="event?.time">
         Time: {{ event.time }}
