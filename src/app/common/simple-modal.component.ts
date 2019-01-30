@@ -11,15 +11,19 @@ import { Component, Input } from '@angular/core';
               <span>&times;</span>
             </button>
             <h4 class="modal-title">{{ title }}</h4>
-            <div class="modal.body">
-              <ng-content></ng-content>
-            </div>
           </div>
+          <div class="modal-body"><ng-content></ng-content></div>
         </div>
       </div>
     </div>
   `,
-  styles: []
+  styles: [
+    `
+      .modal-body {
+        padding: 0;
+      }
+    `
+  ]
 })
 export class SimpleModalComponent {
   @Input() title: string;
