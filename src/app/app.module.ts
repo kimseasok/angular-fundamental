@@ -26,6 +26,7 @@ import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { UpvoteComponent } from './events/event-detials/upvote.component';
 import { VoteService } from './events/event-detials/vote.Service';
 import { LocationValidatorDirective } from './events/location-validator.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
@@ -35,7 +36,8 @@ const jQuery = window['$'];
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   declarations: [
     EventAppComponent,
@@ -52,7 +54,7 @@ const jQuery = window['$'];
     SimpleModalComponent,
     ModalTriggerDirective,
     LocationValidatorDirective,
-    DurationPipe,
+    DurationPipe
   ],
   providers: [
     EventService,
