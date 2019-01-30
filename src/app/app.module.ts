@@ -23,6 +23,8 @@ import { DurationPipe } from './events/event-detials/duration.pipe';
 import { SimpleModalComponent } from './common/simple-modal.component';
 import { JQUERY_TOKEN } from './common/jquery.service';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { UpvoteComponent } from './events/event-detials/upvote.component';
+import { VoteService } from './events/event-detials/vote.Service';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
@@ -43,6 +45,7 @@ const jQuery = window['$'];
     CreateEventComponent,
     CreateSessionComponent,
     SessionListComponent,
+    UpvoteComponent,
     Error404Component,
     CollasibleWellComponent,
     SimpleModalComponent,
@@ -56,6 +59,7 @@ const jQuery = window['$'];
     EventRouteActivator,
     EventListResolver,
     AuthService,
+    VoteService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
   ],
   bootstrap: [EventAppComponent]
