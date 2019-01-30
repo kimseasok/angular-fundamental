@@ -25,6 +25,7 @@ import { JQUERY_TOKEN } from './common/jquery.service';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { UpvoteComponent } from './events/event-detials/upvote.component';
 import { VoteService } from './events/event-detials/vote.Service';
+import { LocationValidatorDirective } from './events/location-validator.directive';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['$'];
@@ -50,6 +51,7 @@ const jQuery = window['$'];
     CollasibleWellComponent,
     SimpleModalComponent,
     ModalTriggerDirective,
+    LocationValidatorDirective,
     DurationPipe,
   ],
   providers: [
